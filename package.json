@@ -1,5 +1,5 @@
 {
-  "name": "saq-crawler",
+  "name": "saq-wishlist-ordering-crawler",
   "version": "1.0.0",
   "description": "crawler to order my saq wishlist",
   "main": "order-wishlist.js",

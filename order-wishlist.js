@@ -1,13 +1,13 @@
 import { Selector } from 'testcafe';
 
 fixture `wishlist`
-    .page `https://www.saq.com/fr/wishlist/index/index/wishlist_id/7524522/`;               // <-- REMPLACE PAR L'URL DE TA WISHLIST (FRANÇAIS SEULEMENT)
+    .page `https://www.saq.com/fr/wishlist/index/index/wishlist_id/7524522/`;               // <-- REPLACE WITH YOUR WISHLIST ID HERE (configured with french pages)
 
 test('New Test', async t => {
     await t
-        .typeText('main .input-text', 'guillaume.blanchet2@gmail.com')          // <-- REMPLACE PAR TON COURRIEL DE TON COMPTE SAQ ICI
+        .typeText('main .input-text', 'guillaume.blanchet2@gmail.com')          // <-- REPLACE WITH YOUR SAQ ACCOUNT HERE
         .pressKey('tab')
-        .typeText(Selector('main .input-text').nth(1), 'PWD')                 // <-- REMPLACE PAR TON PASSWORD DE TON COMPTE SAQ ICI
+        .typeText(Selector('main .input-text').nth(1), 'PWD')                 // <-- REPLACE WITH YOUR SAQ PASSWORD HERE
         .click(Selector('main span').withText('Me connecter'))
         .click(Selector('main span').withText('Tout ajouter au panier'))
         .navigateTo('https://www.saq.com/fr/checkout/cart/')
@@ -15,12 +15,12 @@ test('New Test', async t => {
         .click(Selector('tr > td').withText('succursale'))
         .click('#checkout-shipping-pointofsale .pointofsale')
         .click(Selector('main span').withText('Procéder au paiement'))
-        .typeText(Selector('main .input-text').nth(18), '5598555555555555')  // <-- REMPLACE PAR TON NO DE CARTE DE CREDIT ICI
+        .typeText(Selector('main .input-text').nth(18), '5598555555555555')  // <-- REPLACE BY YOUR CARD NUMBER HERE
         .click('main [data-field-name="expiry_month"]')
-        .click(Selector('main option').withText('01'))                             // <-- REMPLACE PAR LE MOIS D'EXPIRATION DE TA CARTE ICI
+        .click(Selector('main option').withText('01'))                             // <-- REPLACE BY THE EXPIRATION MONTH HERE
         .click('main [data-field-name="expiry_year"]')
-        .click(Selector('main option').withText('2024'))                           // <-- REMPLACE PAR L'ANNEE D'EXPIRATION ICI
-        .typeText('main [data-field-name="card_cvn"]', '111')                   // <-- REMPLACE PAR LE CVC DE TA CARTE ICI
+        .click(Selector('main option').withText('2024'))                           // <-- REPLACE BY THE EXPIRATION YEAR HERE
+        .typeText('main [data-field-name="card_cvn"]', '111')                   // <-- REPLACE BY THE CVV HERE
         .click(Selector('main span').withText('Passez la commande'))
         .click(Selector('main div').withText('Continuer vos achats').nth(3));
 });
