@@ -1,3 +1,7 @@
+# Demo
+
+<video src='order-auto.mp4' width=180></video>
+
 # Prerequisite
 
 1. Install Node.js (https://nodejs.org/en/download/);
