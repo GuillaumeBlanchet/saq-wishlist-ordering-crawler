@@ -1,0 +1,1 @@
+schtasks /Create /RU SYSTEM /SC ONCE /TN order-wishlist-task /ST 00:00 /tr %~dp0\order-wishlist.cmd
