@@ -1,6 +1,6 @@
 # Demo
 
-<video src='order-auto.mp4' width=180></video>
+https://user-images.githubusercontent.com/17527962/229257246-defc8b03-4191-4569-9a25-e4c62c1a3994.mp4
 
 # Prerequisite
 
